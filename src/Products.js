@@ -2,7 +2,7 @@ const Products = [
   {
     _id: "1",
     name: "airpods oneaplus",
-    image: "./images/airpods oneaplus.jpeg",
+    image: "http://localhost:3000/images/airpods oneaplus.jpeg",
     description:
       "Awesom product -fully functional handy best selling product easy to replace no falgsgip product best rated",
     brand: "",

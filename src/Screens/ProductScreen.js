@@ -19,9 +19,9 @@ const ProductScreen = ({ match }) => {
       {/* PRODUCT IMAGE CARD  */}
 
       <Link classNmae="btn btn-outline-secondary my-4" to="/">
-        Go Back
+        <strong> Go Back</strong>
       </Link>
-      <Row>
+      <Row className="mt-4">
         <Col md={4}>
           <Image
             src={productItem.image}
