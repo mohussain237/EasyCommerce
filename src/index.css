@@ -8,3 +8,8 @@ main {
 h4 {
   padding: 0.5rem 0;
 }
+
+.head_NavBar {
+  position: fixed;
+  z-index: 100;
+}
