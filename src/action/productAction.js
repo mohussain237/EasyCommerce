@@ -1,4 +1,6 @@
+
 import axios from "axios";
+
 
 import {
   PRODUCT_LIST_REQUEST,
@@ -9,11 +11,15 @@ import {
   PRODUCT_DETAILS_REQUEST,
 } from "../constants/productConstants";
 
+const api = axios.create({
+  baseURL: process.env.REACT_APP_BASE_URL || "http://localhost:5000",
+ });
+
 export const listProduts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const { data } = await axios.get("http://127.0.0.1:5000/api/products");
+    const { data } = await api.get("/api/products");
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
@@ -34,7 +40,7 @@ export const listProdutDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await api.get(`/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
