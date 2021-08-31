@@ -9,7 +9,7 @@ import { listProduts } from "../action/productAction";
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
-  const { loading, error, Products } = productList;
+  const { loading, error, products } = productList;
 
   useEffect(() => {
     dispatch(listProduts());
@@ -26,7 +26,7 @@ const HomeScreen = () => {
         <Message varient="danger">{error}</Message>
       ) : (
         <Row>
-          {Products.map((product) => (
+          {products.map((product) => (
             <Col key={product._id} sm={10} md={5} lg={3} xl={2}>
               <Product product={product} />
             </Col>
