@@ -1,6 +1,6 @@
 {
   "name": "easyshop",
-   "version": "0.1.0",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^8.5.0"
   }
 }
